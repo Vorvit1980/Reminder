@@ -1,6 +1,7 @@
 package com.example.vorvit1980.reminder;
 
 import android.app.FragmentManager;
+import android.content.pm.ActivityInfo;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         PreferenceHelper.getInstance().init(getApplicationContext());
         preferenceHelper = PreferenceHelper.getInstance();
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         runSplash();
         setUI();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
