@@ -17,4 +17,9 @@ public class Utils {
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH.mm");
         return dateFormat.format(time);
     }
+
+    public static String getFullDate(long date){
+        SimpleDateFormat fullDateFormat = new SimpleDateFormat("dd.MM.yy  HH.mm");
+        return fullDateFormat.format(date);
+    }
 }
